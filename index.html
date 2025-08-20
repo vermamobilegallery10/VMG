@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VMG - Verma Mobile Gallery | Premium Mobile Accessories & PC Assembly</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo-container">
+                <div class="logo" id="animatedLogo">
+                    <span class="logo-text">VMG</span>
+                    <div class="logo-glow"></div>
+                </div>
+                <div class="brand-info">
+                    <span class="brand-name">Verma Mobile Gallery</span>
+                    <span class="brand-tagline">Premium Tech Solutions</span>
+                </div>
+            </div>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#products" class="nav-link">Products</a></li>
+                <li><a href="#pc-build" class="nav-link">PC Build</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="cart-btn" onclick="toggleCart()">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                    <div class="cart-pulse"></div>
+                </button>
+                <div class="hamburger" onclick="toggleMobileMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3><i class="fas fa-shopping-cart"></i> Shopping Cart</h3>
+            <button class="close-cart" onclick="toggleCart()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <div class="empty-cart">
+                <i class="fas fa-shopping-cart"></i>
+                <p>Your cart is empty</p>
+                <span>Add some products to get started</span>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <div class="total-row">
+                    <span>Subtotal:</span>
+                    <span>₹<span id="cartSubtotal">0</span></span>
+                </div>
+                <div class="total-row total-main">
+                    <span>Total:</span>
+                    <span>₹<span id="cartTotal">0</span></span>
+                </div>
+            </div>
+            <button class="checkout-btn" onclick="checkoutWhatsApp()">
+                <i class="fab fa-whatsapp"></i>
+                <span>Checkout via WhatsApp</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Cart Overlay -->
+    <div class="cart-overlay" onclick="toggleCart()"></div>
+
+    <!-- Home Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-bg">
+            <div class="hero-particles"></div>
+            <div class="hero-gradient"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-star"></i>
+                    <span>Premium Quality Since 2019</span>
+                </div>
+                <h1 class="hero-title">
+                    <span class="title-line">Premium Mobile</span>
+                    <span class="title-line highlight">Accessories</span>
+                    <span class="title-line">& Expert PC Assembly</span>
+                </h1>
+                <p class="hero-description">
+                    Discover cutting-edge mobile accessories and professional PC building services. 
+                    We deliver quality, performance, and style in every product.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="2000">0</span>
+                        <span class="stat-label">Happy Customers</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="500">1000+</span>
+                        <span class="stat-label">PC Builds</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="100"></span>
+                        <span class="stat-label">Products</span>
+                    </div>
+                </div>
+                <div class="hero-buttons">
+                    <a href="#products" class="cta-btn primary">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span>Explore Products</span>
+                    </a>
+                    <a href="#pc-build" class="cta-btn secondary">
+                        <i class="fas fa-desktop"></i>
+                        <span>Build Your PC</span>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-elements">
+                    <div class="floating-card card-1">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span>Mobile Cases</span>
+                    </div>
+                    <div class="floating-card card-2">
+                        <i class="fas fa-headphones"></i>
+                        <span>Audio Gear</span>
+                    </div>
+                    <div class="floating-card card-3">
+                        <i class="fas fa-desktop"></i>
+                        <span>PC Building</span>
+                    </div>
+                    <div class="floating-card card-4">
+                        <i class="fas fa-bolt"></i>
+                        <span>Fast Charging</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i class="fas fa-box"></i>
+                    <span>Our Products</span>
+                </div>
+                <h2>Premium Mobile Accessories</h2>
+                <p>Discover our extensive collection of high-quality mobile accessories and tech products</p>
+            </div>
+            
+            <div class="product-filters">
+                <button class="filter-btn active" data-category="all">
+                    <i class="fas fa-th"></i>
+                    <span>All Products</span>
+                </button>
+                <button class="filter-btn" data-category="cases">
+                    <i class="fas fa-mobile-alt"></i>
+                    <span>Cases & Covers</span>
+                </button>
+                <button class="filter-btn" data-category="chargers">
+                    <i class="fas fa-plug"></i>
+                    <span>Chargers</span>
+                </button>
+                <button class="filter-btn" data-category="audio">
+                    <i class="fas fa-headphones"></i>
+                    <span>Audio</span>
+                </button>
+                <button class="filter-btn" data-category="accessories">
+                    <i class="fas fa-cog"></i>
+                    <span>Accessories</span>
+                </button>
+            </div>
+
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be dynamically loaded here -->
+            </div>
+
+            <div class="products-cta">
+                <h3>Can't find what you're looking for?</h3>
+                <p>Contact us for custom orders and special requests</p>
+                <a href="#contact" class="cta-btn primary">
+                    <i class="fas fa-envelope"></i>
+                    <span>Contact Us</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PC Build Section -->
+    <section id="pc-build" class="pc-build-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i class="fas fa-desktop"></i>
+                    <span>PC Assembly</span>
+                </div>
+                <h2>Professional PC Building Services</h2>
+                <p>Custom builds tailored to your specific needs and budget</p>
+            </div>
+
+            <div class="build-process">
+                <div class="process-step">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <div class="step-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h3>Consultation</h3>
+                        <p>We discuss your requirements, usage patterns, and budget to recommend the perfect components for your needs.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <div class="step-icon">
+                            <i class="fas fa-list-check"></i>
+                        </div>
+                        <h3>Component Selection</h3>
+                        <p>Choose from premium brands and latest technology components for optimal performance and reliability.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <div class="step-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3>Professional Assembly</h3>
+                        <p>Our certified technicians assemble your PC with precision, ensuring proper cable management and cooling.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">04</div>
+                    <div class="step-content">
+                        <div class="step-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h3>Testing & Support</h3>
+                        <p>Complete system testing, OS installation, and ongoing technical support for your peace of mind.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="build-packages">
+                <div class="package-card">
+                    <div class="package-header">
+                        <div class="package-icon">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                        <h3>Gaming Build</h3>
+                        <div class="package-price">Starting ₹45,000</div>
+                    </div>
+                    <div class="package-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>High-performance gaming components</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>RGB lighting setup</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Advanced cooling system</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>2 year comprehensive warranty</span>
+                        </div>
+                    </div>
+                    <button class="package-btn" onclick="openBuildQuery('gaming')">
+                        <i class="fas fa-rocket"></i>
+                        <span>Get Gaming Quote</span>
+                    </button>
+                </div>
+                
+                <div class="package-card featured">
+                    <div class="popular-badge">
+                        <i class="fas fa-crown"></i>
+                        <span>Most Popular</span>
+                    </div>
+                    <div class="package-header">
+                        <div class="package-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <h3>Professional Build</h3>
+                        <div class="package-price">Starting ₹35,000</div>
+                    </div>
+                    <div class="package-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Work & productivity optimized</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Enterprise-grade reliability</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Energy efficient components</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>3 year premium warranty</span>
+                        </div>
+                    </div>
+                    <button class="package-btn" onclick="openBuildQuery('professional')">
+                        <i class="fas fa-star"></i>
+                        <span>Get Pro Quote</span>
+                    </button>
+                </div>
+                
+                <div class="package-card">
+                    <div class="package-header">
+                        <div class="package-icon">
+                            <i class="fas fa-wallet"></i>
+                        </div>
+                        <h3>Budget Build</h3>
+                        <div class="package-price">Starting ₹25,000</div>
+                    </div>
+                    <div class="package-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Essential computing needs</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Best value for money</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Reliable performance</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>1 year standard warranty</span>
+                        </div>
+                    </div>
+                    <button class="package-btn" onclick="openBuildQuery('budget')">
+                        <i class="fas fa-dollar-sign"></i>
+                        <span>Get Budget Quote</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="section-badge">
+                        <i class="fas fa-info-circle"></i>
+                        <span>About Us</span>
+                    </div>
+                    <h2>Verma Mobile Gallery</h2>
+                    <p class="lead">Your trusted partner for premium mobile accessories and professional PC assembly services since 2019.</p>
+                    
+                    <div class="about-features">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h4>5+ Years Experience</h4>
+                                <p>Serving customers with quality products and expert technical services</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h4>Quality Guarantee</h4>
+                                <p>All products come with comprehensive warranty and quality assurance</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h4>Expert Team</h4>
+                                <p>Certified technicians and dedicated customer service specialists</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-stats">
+                        <div class="stat-card">
+                            <div class="stat-number" data-target="2000">0</div>
+                            <div class="stat-label">Happy Customers</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number" data-target="500">0</div>
+                            <div class="stat-label">PC Builds Completed</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number" data-target="100">0</div>
+                            <div class="stat-label">Product Categories</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number" data-target="99">0</div>
+                            <div class="stat-label">Satisfaction Rate</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-visual">
+                    <div class="visual-card">
+                        <div class="visual-icon">
+                            <i class="fas fa-store"></i>
+                        </div>
+                        <h3>VMG Store</h3>
+                        <p>Premium Tech Solutions</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i class="fas fa-envelope"></i>
+                    <span>Contact Us</span>
+                </div>
+                <h2>Get in Touch</h2>
+                <p>Ready to upgrade your tech? We're here to help with all your mobile and PC needs</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Phone</h4>
+                            <p>+91 8979220256</p>
+                            <span>Sun - Sat: 9:00 AM - 9:00 PM</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>vermamobilegallery10@gmail.com</p>
+                            <span>We'll respond within 3 working hours</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Location</h4>
+                            <p>Verma Mobile Gallery, Sitapur, Jwalapur, Haridwar, Uttarakhand - 249407</p>
+                            <span>Visit our showroom</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>WhatsApp</h4>
+                            <p>+91 8979220256</p>
+                            <span>Quick support & orders</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="contact-form" id="contactForm">
+                    <input type="hidden" name="access_key" value="d9c95c6e-6669-46c7-9553-811cca27bd94">
+                    <input type="hidden" name="subject" value="New Contact Form Submission - VMG Website">
+                    
+                    <div class="form-header">
+                        <h3>Send us a Message</h3>
+                        <p>Fill out the form below and we'll get back to you soon</p>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" name="name" required>
+                            <label>Full Name</label>
+                            <div class="form-line"></div>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" required>
+                            <label>Email Address</label>
+                            <div class="form-line"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="tel" name="phone" required>
+                            <label>Phone Number</label>
+                            <div class="form-line"></div>
+                        </div>
+                        <div class="form-group">
+                            <select name="service" required>
+                                <option value=""></option>
+                                <option value="mobile-accessories">Mobile Accessories</option>
+                                <option value="pc-build">PC Assembly</option>
+                                <option value="repair">Repair Services</option>
+                                <option value="consultation">Consultation</option>
+                            </select>
+                            <label>Service Interest</label>
+                            <div class="form-line"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea name="message" rows="5" required></textarea>
+                        <label>Your Message</label>
+                        <div class="form-line"></div>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-paper-plane"></i>
+                        <span>Send Message</span>
+                        <div class="btn-glow"></div>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <div class="logo">
+                            <span class="logo-text">VMG</span>
+                        </div>
+                        <div class="footer-brand">
+                            <h3>Verma Mobile Gallery</h3>
+                            <p>Premium Tech Solutions</p>
+                        </div>
+                    </div>
+                    <p class="footer-desc">Your trusted destination for premium mobile accessories and professional PC assembly services. Quality, performance, and customer satisfaction guaranteed.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#pc-build">PC Build</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Mobile Accessories</a></li>
+                        <li><a href="#">PC Assembly</a></li>
+                        <li><a href="#">Repair Services</a></li>
+                        <li><a href="#">Technical Support</a></li>
+                        <a href="policy.html">Privacy Policy</a>
+                    </ul>
+                    
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info-footer">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+91 8979220256</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>vermamobilegallery10@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Haridwar, Uttarakhand - 249407</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Mon - Sat: 9:00 AM - 8:00 PM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 Verma Mobile Gallery. All rights reserved.</p>
+                    <p>Designed by Verma Ji</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Product Details Modal -->
+    <div class="modal-overlay" id="productModal">
+        <div class="modal-container">
+            <div class="modal-content">
+                <button class="modal-close" onclick="closeProductModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+                <div class="modal-body" id="modalBody">
+                    <!-- Product details will be inserted here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PC Build Query Modal -->
+    <div class="modal-overlay" id="buildQueryModal">
+        <div class="modal-container">
+            <div class="modal-content">
+                <button class="modal-close" onclick="closeBuildQuery()">
+                    <i class="fas fa-times"></i>
+                </button>
+                <div class="modal-body">
+                    <div class="modal-header">
+                        <div class="modal-icon">
+                            <i class="fas fa-desktop"></i>
+                        </div>
+                        <h3>PC Build Consultation</h3>
+                        <p>Tell us about your requirements and we'll create the perfect build for you</p>
+                    </div>
+                    <form id="buildQueryForm" class="query-form">
+                        <input type="hidden" name="access_key" value="d9c95c6e-6669-46c7-9553-811cca27bd94">
+                        <input type="hidden" name="subject" value="PC Build Query - VMG Website">
+                        <input type="hidden" name="build_type" id="buildType">
+                        <input type="hidden" name="from_name" value="VMG Query">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" name="name" required>
+                                <label>Full Name</label>
+                                <div class="form-line"></div>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name="email" required>
+                                <label>Email Address</label>
+                                <div class="form-line"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="tel" name="phone" required>
+                                <label>Phone Number</label>
+                                <div class="form-line"></div>
+                            </div>
+                            <div class="form-group">
+                                <input type="number" name="budget" min="20000" required>
+                                <label>Budget (₹)</label>
+                                <div class="form-line"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <select name="usage" required>
+                                <option value=""></option>
+                                <option value="gaming">Gaming</option>
+                                <option value="work">Work/Office</option>
+                                <option value="design">Design/Editing</option>
+                                <option value="general">General Use</option>
+                            </select>
+                            <label>Primary Usage</label>
+                            <div class="form-line"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea name="requirements" rows="4"></textarea>
+                            <label>Specific Requirements (Optional)</label>
+                            <div class="form-line"></div>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-paper-plane"></i>
+                            <span>Request Consultation</span>
+                            <div class="btn-glow"></div>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Thank You Modal -->
+    <div class="modal-overlay" id="thankYouModal">
+        <div class="modal-container">
+            <div class="modal-content thank-you-modal">
+                <div class="thank-you-content">
+                    <div class="thank-you-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>Thank You!</h3>
+                    <p id="thankYouMessage">Your message has been sent successfully. We'll get back to you soon!</p>
+                    <button class="cta-btn primary" onclick="closeThankYou()">
+                        <i class="fas fa-check"></i>
+                        <span>Close</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Spinner -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner">
+            <div class="spinner"></div>
+            <p>Processing...</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

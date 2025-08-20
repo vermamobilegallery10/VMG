@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VMG - Verma Mobile Gallery | Premium Mobile Accessories & PC Assembly</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo-container">
+                <div class="logo" id="animatedLogo">
+                    <span class="logo-text">VMG</span>
+                    <div class="logo-glow"></div>
+                </div>
+                <div class="brand-info">
+                    <span class="brand-name">Verma Mobile Gallery</span>
+                    <span class="brand-tagline">Premium Tech Solutions</span>
+                </div>
+            </div>
+            
+            <nav class="nav-menu" id="navMenu">
+                <a href="index.html">Home</a>
+                <a href="index.html/#products">Products</a>
+                <a href="index.html/#pc-build">PC Build</a>
+                <a href="index.html/#about">About</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="cart-btn" onclick="toggleCart()">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                    <div class="cart-pulse"></div>
+                </button>
+                <div class="hamburger" onclick="toggleMobileMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3><i class="fas fa-shopping-cart"></i> Shopping Cart</h3>
+            <button class="close-cart" onclick="toggleCart()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <div class="empty-cart">
+                <i class="fas fa-shopping-cart"></i>
+                <p>Your cart is empty</p>
+                <span>Add some products to get started</span>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <div class="total-row">
+                    <span>Subtotal:</span>
+                    <span>₹<span id="cartSubtotal">0</span></span>
+                </div>
+                <div class="total-row total-main">
+                    <span>Total:</span>
+                    <span>₹<span id="cartTotal">0</span></span>
+                </div>
+            </div>
+            <button class="checkout-btn" onclick="checkoutWhatsApp()">
+                <i class="fab fa-whatsapp"></i>
+                <span>Checkout via WhatsApp</span>
+            </button>
+        </div>
+    </div>
+</head>
+<body>
+
+
+  <!-- ===== Header ===== -->
+  <header>
+    <h1>Verma Mobile Gallery</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Products</a>
+      <a href="#">Contact</a>
+      <a href="#">Policy</a>
+    </nav>
+  </header>
+
+  <!-- ===== Policy Container ===== -->
+  <section class="policy-container">
+    <h2>Privacy & Policy</h2>
+    <p>
+      Welcome to <strong>Verma Mobile Gallery</strong>. We are committed to protecting your privacy and ensuring a secure experience while shopping with us.
+    </p>
+
+    <h3>Information We Collect</h3>
+    <ul>
+      <li>Personal details like name, phone number, and email address.</li>
+      <li>Billing and shipping information when you make a purchase.</li>
+      <li>Device details and browsing data to improve our services.</li>
+    </ul>
+
+    <h3>How We Use Your Information</h3>
+    <ul>
+      <li>To process orders and deliver products to you.</li>
+      <li>To provide customer support and resolve queries.</li>
+      <li>To send promotional offers, updates, and service improvements.</li>
+    </ul>
+
+    <h3>Data Protection</h3>
+    <p>
+      We use advanced security measures to protect your personal data. Your information is never shared with unauthorized parties.
+    </p>
+
+    <h3>Contact Us</h3>
+    <p>
+      If you have any questions regarding our policy, feel free to contact us:
+    </p>
+    <p>
+      📞 <strong>+91-8979220256</strong><br>
+      📧 <a href="mailto:vermamobilegallery10@gmail.com">vermamobilegallery10@gmail.com</a>
+    </p>
+  </section>
+
+  <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i class="fas fa-envelope"></i>
+                    <span>Contact Us</span>
+                </div>
+                <h2>Get in Touch</h2>
+                <p>Ready to upgrade your tech? We're here to help with all your mobile and PC needs</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Phone</h4>
+                            <p>+91 8979220256</p>
+                            <span>Sun - Sat: 9:00 AM - 9:00 PM</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>vermamobilegallery10@gmail.com</p>
+                            <span>We'll respond within 3 working hours</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Location</h4>
+                            <p>Verma Mobile Gallery, Sitapur, Jwalapur, Haridwar, Uttarakhand - 249407</p>
+                            <span>Visit our showroom</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>WhatsApp</h4>
+                            <p>+91 8979220256</p>
+                            <span>Quick support & orders</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="contact-form" id="contactForm">
+                    <input type="hidden" name="access_key" value="d9c95c6e-6669-46c7-9553-811cca27bd94">
+                    <input type="hidden" name="subject" value="New Contact Form Submission - VMG Website">
+                    
+                    <div class="form-header">
+                        <h3>Send us a Message</h3>
+                        <p>Fill out the form below and we'll get back to you soon</p>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" name="name" required>
+                            <label>Full Name</label>
+                            <div class="form-line"></div>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" required>
+                            <label>Email Address</label>
+                            <div class="form-line"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="tel" name="phone" required>
+                            <label>Phone Number</label>
+                            <div class="form-line"></div>
+                        </div>
+                        <div class="form-group">
+                            <select name="service" required>
+                                <option value=""></option>
+                                <option value="mobile-accessories">Mobile Accessories</option>
+                                <option value="pc-build">PC Assembly</option>
+                                <option value="repair">Repair Services</option>
+                                <option value="consultation">Consultation</option>
+                            </select>
+                            <label>Service Interest</label>
+                            <div class="form-line"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea name="message" rows="5" required></textarea>
+                        <label>Your Message</label>
+                        <div class="form-line"></div>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-paper-plane"></i>
+                        <span>Send Message</span>
+                        <div class="btn-glow"></div>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <div class="logo">
+                            <span class="logo-text">VMG</span>
+                        </div>
+                        <div class="footer-brand">
+                            <h3>Verma Mobile Gallery</h3>
+                            <p>Premium Tech Solutions</p>
+                        </div>
+                    </div>
+                    <p class="footer-desc">Your trusted destination for premium mobile accessories and professional PC assembly services. Quality, performance, and customer satisfaction guaranteed.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index/html/#home">Home</a></li>
+                        <li><a href="index.html/#products">Products</a></li>
+                        <li><a href="index.html/#pc-build">PC Build</a></li>
+                        <li><a href="index.html/#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Mobile Accessories</a></li>
+                        <li><a href="#">PC Assembly</a></li>
+                        <li><a href="#">Repair Services</a></li>
+                        <li><a href="#">Technical Support</a></li>
+                        <li><a href="policy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info-footer">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+91 8979220256</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>vermamobilegallery10@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Haridwar, Uttarakhand - 249407</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Mon - Sat: 9:00 AM - 8:00 PM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 Verma Mobile Gallery. All rights reserved.</p>
+                    <p>Designed by Verma Ji</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+
+</body>
+</html>
